@@ -1,8 +1,9 @@
-# Getting Started with OpenShift GitOps
-
-
+# Chatapazar Remark: 
 In openshift, system:serviceaccount:argocd:argocd-application-controller can't create svc or deployment because the serviceaccount doesn't have corresponding permissions.
 So, I have to run this command "oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:argocd:argocd-application-controller" manually
+
+
+# Getting Started with OpenShift GitOps
 
 
 OpenShift GitOps is an add-on on OpenShift which provides Argo CD and other tooling to enable teams to implement GitOps workflows for cluster configuration and application delivery. OpenShift GitOps provides [Argo CD](https://argo-cd.readthedocs.io/en/stable/) as the core of the GitOps workflow and [GitOps Application Manager CLI](https://github.com/redhat-developer/kam) in order to help developers bootstrap a GitOps workflow for delivering applications.
