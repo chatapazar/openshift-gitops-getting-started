@@ -4,7 +4,7 @@ So, I have to run this command "oc adm policy add-cluster-role-to-user cluster-a
 ```bash
 oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller
 ```
-
+or change rolbinding service account of petclinic from argocd-cluster-argocd-application-controller to openshift-gitops-argocd-application-controller
 
 # Getting Started with OpenShift GitOps
 
