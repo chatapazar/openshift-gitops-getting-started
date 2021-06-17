@@ -5,6 +5,22 @@ So, I have to run this command "oc adm policy add-cluster-role-to-user cluster-a
 oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller
 ```
 or change rolbinding service account of petclinic from argocd-cluster-argocd-application-controller to openshift-gitops-argocd-application-controller
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: spring-petclinic-role-binding
+  namespace: spring-petclinic
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller #change from argocd-cluster-argocd-application-controller
+  namespace: openshift-gitops
+```
+
 
 # Getting Started with OpenShift GitOps
 
