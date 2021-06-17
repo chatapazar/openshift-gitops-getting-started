@@ -2,9 +2,7 @@
 In openshift, system:serviceaccount:argocd:argocd-application-controller can't create svc or deployment because the serviceaccount doesn't have corresponding permissions.
 So, I have to run this command "oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:argocd:argocd-application-controller" manually
 ```bash
-oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:argocd:argocd-application-controller
-#or
-oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:openshift-gitops:openshift-gitops-applicationset-controller
+oc adm policy add-cluster-role-to-user cluster-admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller
 ```
 
 
