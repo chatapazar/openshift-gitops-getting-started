@@ -21,6 +21,8 @@ subjects:
   namespace: openshift-gitops
 ```
 
+# argocd quick start & add cluster
+https://argoproj.github.io/argo-cd/getting_started/
 
 # Getting Started with OpenShift GitOps
 
